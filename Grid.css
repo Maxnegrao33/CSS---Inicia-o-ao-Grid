@@ -1,0 +1,46 @@
+Grid
+/*Também faz posicionamentos horizontais e verticais
+ao mesmo tempo*/
+
+(HTML)
+<header> Topo </header>
+<main> Conteúdo </main>
+<aside> Informações adicionais</aside>
+<footer> Rodapé </footer>
+
+/*CSS*/
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer"
+
+    grid-templates-rows:30px 1 fr 40px;
+    /*As alturas de 30 e 40 px estão fixas*/
+    grid-templates-columns: 1fr 80px
+    /*fr significa fração/flexível*/
+    /*Quando for definido px, é porque seu tamanho está fixo*/
+}
+
+header{
+    grid-area: header;
+    background-color:green ;
+}
+
+main{
+    grid-area: main;
+    background-color: red ;
+}
+
+aside{
+    grid-area: aside;
+    background-color: blue;
+}
+
+footer{
+    background-color: gray ;
+}
